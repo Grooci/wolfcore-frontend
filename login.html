@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WolfCore Academy</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <h1>🐺 WolfCore Portal</h1>
+    <p class="welcome-text">
+    Learn. Build. Succeed.
+    </p>
+    <div class="auth-tabs">
+        <button id="loginTab" onclick="showLogin()">Login</button>
+        <button id="signupTab" onclick="showSignup()">Sign Up</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginForm" class="form-box">
+        <h2>Login</h2>
+
+        <input type="text" id="loginUsername" placeholder="Username">
+
+        <div class="password-box">
+            <input type="password" id="loginPass" placeholder="Password">
+            <span onclick="togglePassword('loginPass')">👁️</span>
+        </div>
+
+        <button onclick="login()">Login</button>
+        <p class="forgot-link" onclick="showForgot()">
+        Forgot Password?
+        </p>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signupForm" class="form-box hidden">
+        <h2>Sign Up</h2>
+
+        <input type="text" id="signupUsername" placeholder="Username">
+
+        <!-- IMPORTANT: type=text (supports email OR phone) -->
+        <input type="text" id="signupEmail" placeholder="Email OR Phone (+256...)">
+
+        <div class="password-box">
+            <input type="password" id="signupPass" placeholder="Password">
+            <span onclick="togglePassword('signupPass')">👁️</span>
+        </div>
+
+        <button onclick="signup()">Create Account</button>
+    </div>
+    <div id="forgotForm" class="form-box hidden">
+    <h2>Forgot Password</h2>
+
+    <input type="text" id="resetContact" placeholder="Email or Phone or Username">
+
+    <button onclick="sendResetCode()">Send Code 📩</button>
+
+    <hr>
+
+    <input type="text" id="resetCode" placeholder="Enter Code">
+
+    <input type="password" id="newPassword" placeholder="New Password">
+
+    <button onclick="resetPassword()">Reset Password 🔐</button>
+
+    <p onclick="showLogin()" style="cursor:pointer; color:#7b2cff;">
+        Back to Login
+    </p>
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
