@@ -1,4 +1,5 @@
 body {
+    overflow-x: hidden;
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -233,10 +234,10 @@ body.dark-mode input {
 @media (max-width: 768px) {
 
     .sidebar {
-        width: 260px;
+        width: 260px !important;
+        left: -260px !important;
         height: 100vh;
         top: 0;
-        left: -260px;
         position: fixed;
         z-index: 1000;
         padding: 15px;
@@ -245,11 +246,10 @@ body.dark-mode input {
     }
 
     .sidebar.active {
-        display: block;
-        left: 0;
+        left: 0 !important;
     }
     .sidebar.collapsed {
-        width: 260px;
+        width: 260px !important;
     }
     .main {
         margin-left: 0;
