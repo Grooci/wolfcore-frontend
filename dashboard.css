@@ -235,6 +235,7 @@ body.dark-mode input {
     .sidebar {
         width: 260px;
         height: 100vh;
+        top: 0;
         left: -260px;
         position: fixed;
         z-index: 1000;

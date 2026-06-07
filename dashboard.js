@@ -45,6 +45,11 @@ function showSection(sectionId) {
     if (sectionId === "settingsSection") {
         loadSettings();
     }
+
+    // Close mobile menu after selecting an item
+    if (window.innerWidth <= 768) {
+        document.getElementById("sidebar").classList.remove("active");
+    }
 }
 
 function toggleSidebar() {
