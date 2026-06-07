@@ -77,10 +77,6 @@ body {
     width: calc(100% - 260px);
     transition: all 0.3s ease;
 }
-.sidebar.collapsed + .main {
-    margin-left: 90px;
-    width: calc(100% - 90px);
-}
 .topbar {
     display: flex;
     justify-content: space-between;
