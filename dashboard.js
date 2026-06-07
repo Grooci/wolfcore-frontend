@@ -48,7 +48,13 @@ function showSection(sectionId) {
 }
 
 function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("active");
+    const sidebar = document.getElementById("sidebar");
+
+    if (window.innerWidth <= 768) {
+        sidebar.classList.toggle("active");
+    } else {
+        sidebar.classList.toggle("collapsed");
+    }
 }
 
 async function loadDashboardData() {

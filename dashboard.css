@@ -233,12 +233,14 @@ body.dark-mode input {
 @media (max-width: 768px) {
 
     .sidebar {
-        width: 100%;
-        height: auto;
+        width: 260px;
+        height: 100vh;
+        left: -260px;
         position: fixed;
         z-index: 1000;
         padding: 15px;
-        display: none;
+        display: block;
+        transition: left 0.3s ease;
     }
 
     .sidebar.active {
