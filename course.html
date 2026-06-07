@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WolfCore Course</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="main">
+    <div class="topbar">
+        <h1 id="courseTitle">Course</h1>
+        <button class="logout" onclick="goBack()">Back</button>
+    </div>
+    <div class="card">
+        <h2>Lesson 1</h2>
+        <p>Welcome to this course. More lessons coming soon.</p>
+    </div>
+</div>
+<script>
+    let course = localStorage.getItem("current_course");
+if (course) {
+    document.getElementById("courseTitle").innerText = course;
+} else {
+    document.getElementById("courseTitle").innerText = "Course";
+}
+</script>
+<script src="dashboard.js"></script>
+</body>
+</html>
