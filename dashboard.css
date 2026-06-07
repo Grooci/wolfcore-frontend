@@ -248,7 +248,9 @@ body.dark-mode input {
         display: block;
         left: 0;
     }
-
+    .sidebar.collapsed {
+        width: 260px;
+    }
     .main {
         margin-left: 0;
         width: 100%;
@@ -286,4 +288,15 @@ body.dark-mode input {
         padding: 16px;
         font-size: 1rem;
     }
+}
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+}
+
+#overlay.active {
+    display: block;
 }

@@ -54,12 +54,19 @@ function showSection(sectionId) {
 
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
 
     if (window.innerWidth <= 768) {
         sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
     } else {
         sidebar.classList.toggle("collapsed");
     }
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
 }
 
 async function loadDashboardData() {
