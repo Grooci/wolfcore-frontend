@@ -232,7 +232,9 @@ body.dark-mode input {
     border: 1px solid #333;
 }
 @media (max-width: 768px) {
-
+body {
+        overflow-x: hidden;
+    }
     .sidebar {
         width: 260px !important;
         left: -260px !important;
@@ -252,8 +254,8 @@ body.dark-mode input {
         width: 260px !important;
     }
     .main {
-        margin-left: 0;
-        width: 100%;
+        margin-left: 0 !important;
+        width: 100% !important;
         padding: 20px;
     }
 
