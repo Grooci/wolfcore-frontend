@@ -245,6 +245,7 @@ body.dark-mode input {
 
     .sidebar.active {
         display: block;
+        left: 0;
     }
 
     .main {
