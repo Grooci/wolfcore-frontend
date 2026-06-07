@@ -48,7 +48,7 @@ function showSection(sectionId) {
 }
 
 function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("collapsed");
+    document.getElementById("sidebar").classList.toggle("active");
 }
 
 async function loadDashboardData() {
