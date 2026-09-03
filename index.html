@@ -1,146 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIGITAL SKILLS</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WolfCore Academy — Practical Digital Skills</title>
+<meta name="description" content="WolfCore Academy teaches Word, Excel, PowerPoint, and everyday internet skills through practical, one-on-one training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav class="navbar">
-
-    <h2>🐺 WolfCore Academy</h2>
-
-    <div class="menu-btn" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <div class="links" id="mobileMenu">
-        <a href="#">Home</a>
-        <a href="#services">Courses</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-
+  <a href="#top" class="brand">
+    <span class="brand-mark">🐺</span>
+    <span>WolfCore Academy</span>
+  </a>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="links" id="mobileMenu">
+    <a href="#services">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html" class="nav-cta">Student portal</a>
+  </div>
 </nav>
-<header class="hero">
-    <div class="hero-text">
-        <h1>WELCOME TO <span>WOLFCORE ACADEMY</span></h1>
-        <p>Empowering Digital Skills for Education, Employment, and Growth</p>
-        <p class="tagline">Learn. Build. Succeed.</p>
-        <a href="#services" class="btn">Explore Courses</a>
-        <a href="login.html" class="btn">Student Portal</a>
-        <a href="#contact" class="btn">Contact Me</a>
+
+<header class="hero" id="top">
+  <div class="hero-text">
+    <h1>Practical computer skills, taught one person at a time.</h1>
+    <p class="hero-lede">
+      We teach Word, Excel, PowerPoint, and everyday internet skills to
+      students, job seekers, and professionals — in plain language, at
+      your pace.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-primary">Explore courses</a>
+      <a href="login.html" class="btn btn-ghost">Student portal</a>
     </div>
-    <div class="hero-image">
-        <img src="wolfy.png" alt="WolfCore Logo">
-    </div>
+    <a href="#contact" class="hero-subtle-link">or message us on WhatsApp →</a>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="moon-glow"></div>
+    <img src="wolfy.png" alt="" class="hero-wolf">
+  </div>
 </header>
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="grid">
-    <div class="card">
-    <h3>💻 Computer Basics</h3>
-    <p>Learn essential computer skills for work, school, and everyday use.</p>
-    </div>
-    <div class="card">
-    <h3>📝 Microsoft Word Mastery</h3>
-    <p>Master the fundamentals of Microsoft Word for professional document creation.</p>
-    </div>
-    <div class="card">
-    <h3>📊 Excel for Work & Business</h3>
-    <p>Enhance your data analysis and reporting skills with Microsoft Excel.</p>
-    </div>
-    <div class="card">
-    <h3>📽️ PowerPoint Presentations</h3>
-    <p>Create engaging and professional presentations with PowerPoint.</p>
-    </div>
-    <div class="card">
-    <h3>📽️ Internet & Web Browsing</h3>
-    <p>Learn how to effectively use the internet and web browsers for research and communication.</p>
-    </div>
-    <div class="card">
-    <h3>👤 1-on-1 Training</h3>
-    <p>Receive personalized instruction tailored to your learning needs.</p>
-    </div>
-    <div class="card">
-    <h3>👥 Group Training Sessions(coming soon)</h3>
-    <p>Join interactive group sessions to learn and collaborate with others.</p>
-    </div>
-    </div>
+
+<section id="services" class="services">
+  <h2>What you'll learn</h2>
+  <p class="section-lede">Seven ways to get comfortable with the tools you use for school, work, and everyday life.</p>
+
+  <div class="bento">
+    <article class="bento-card bento-large">
+      <span class="card-icon">💻</span>
+      <h3>Computer Basics</h3>
+      <p>Files, folders, settings, and the everyday habits that make a computer feel less intimidating.</p>
+    </article>
+
+    <article class="bento-card">
+      <span class="card-icon">📝</span>
+      <h3>Microsoft Word</h3>
+      <p>Format real documents — CVs, letters, reports — the way employers expect to see them.</p>
+    </article>
+
+    <article class="bento-card">
+      <span class="card-icon">📊</span>
+      <h3>Excel for Work &amp; Business</h3>
+      <p>Build spreadsheets, formulas, and simple reports you'll actually use on the job.</p>
+    </article>
+
+    <article class="bento-card">
+      <span class="card-icon">📽️</span>
+      <h3>PowerPoint Presentations</h3>
+      <p>Put together clean, confident presentations without wrestling with the software.</p>
+    </article>
+
+    <article class="bento-card">
+      <span class="card-icon">🌐</span>
+      <h3>Internet &amp; Web Basics</h3>
+      <p>Search, browse, and communicate online safely and effectively.</p>
+    </article>
+
+    <article class="bento-card bento-accent">
+      <span class="card-icon">👤</span>
+      <h3>1-on-1 Training</h3>
+      <p>Instruction built entirely around how you learn best.</p>
+    </article>
+
+    <article class="bento-card bento-wide">
+      <span class="card-icon">👥</span>
+      <h3>Group Training Sessions <span class="soon">Coming soon</span></h3>
+      <p>Learn alongside others in small, interactive group sessions.</p>
+    </article>
+  </div>
 </section>
+
 <section class="stats">
-    <h2>Building Digital Confidence</h2>
-    <div class="stats-grid">
-        <div class="stat-box">
-            <h3>100%</h3>
-            <p>Practical Learning</p>
-        </div>
-        <div class="stat-box">
-            <h3>1-on-1</h3>
-            <p>Personal Support</p>
-        </div>
-        <div class="stat-box">
-            <h3>Beginner</h3>
-            <p>Friendly Courses</p>
-        </div>
-        <div class="stat-box">
-            <h3>Certificate</h3>
-            <p>Proof of Completion</p>
-        </div>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <h3>100%</h3>
+      <p>Practical learning</p>
     </div>
-</section>
-<section>
-    <h2>Why Choose Us?</h2>
-    <p>✓ Flexible online training</p>
-    <p>✓ Affordable fees</p>
-    <p>✓ Practical hands-on learning</p>
-    <p>✓ One-on-one support</p>
-    <p>✓ Certificate/Proof of Completion</p>
-</section>
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Book a 1-on-1 session</p>
-    <p>Fast, practical, and beginner-friendly support.</p>
-
-    <div class="contact-buttons">
-        <a href="https://wa.me/256704653340" class="contact-btn whatsapp">
-            💬 WhatsApp
-        </a>
-
-        <a href="mailto:wolfcore361@gmail.com" class="contact-btn">
-            ✉️ Email Me
-        </a>
-
-        <a href="tel:+256704653340" class="contact-btn">
-            📞 Call Me
-        </a>
+    <div class="stat-box">
+      <h3>1-on-1</h3>
+      <p>Personal support</p>
     </div>
+    <div class="stat-box">
+      <h3>Beginner</h3>
+      <p>Friendly courses</p>
+    </div>
+    <div class="stat-box">
+      <h3>Certified</h3>
+      <p>Proof of completion</p>
+    </div>
+  </div>
+</section>
 
-    <p class="contact-note">We respond quickly ⚡</p>
+<section class="why">
+  <h2>Why train with us</h2>
+  <ul class="why-list">
+    <li>Flexible online training that fits around your schedule</li>
+    <li>Affordable fees, with no hidden costs</li>
+    <li>Practical, hands-on learning from the first session</li>
+    <li>Direct one-on-one support from your instructor</li>
+    <li>A certificate of completion when you finish</li>
+  </ul>
 </section>
-<section id="about">
-    <h2>About WolfCore Academy</h2>
-    <p>
-        WolfCore Academy is a digital skills training platform focused on
-        helping students, job seekers, and professionals build practical
-        technology skills that create real opportunities.
-    </p>
-    <p>
-        We believe technology should be accessible to everyone. Our courses
-        are designed to be simple, practical, and beginner-friendly while
-        preparing learners for school, work, business, and personal growth.
-    </p>
-    <p>
-        Whether you're learning Microsoft Office, computer fundamentals,
-        or digital productivity skills, WolfCore Academy helps you learn
-        with confidence.
-    </p>
+
+<section id="contact" class="contact">
+  <h2>Book a 1-on-1 session</h2>
+  <p class="section-lede">Fast, practical, and beginner-friendly support — reach out however's easiest.</p>
+  <div class="contact-buttons">
+    <a href="https://wa.me/256704653340" class="contact-btn whatsapp">💬 WhatsApp</a>
+    <a href="mailto:wolfcore361@gmail.com" class="contact-btn">✉️ Email</a>
+    <a href="tel:+256704653340" class="contact-btn">📞 Call</a>
+  </div>
+  <p class="contact-note">We respond quickly ⚡</p>
 </section>
-<script>
-function toggleMenu() {
-    document.getElementById("mobileMenu")
-            .classList.toggle("active");
-}
-</script>
+
+<section id="about" class="about">
+  <h2>About WolfCore Academy</h2>
+  <p>
+    WolfCore Academy is a digital skills training platform focused on
+    helping students, job seekers, and professionals build practical
+    technology skills that create real opportunities.
+  </p>
+  <p>
+    We believe technology should be accessible to everyone. Our courses
+    are designed to be simple, practical, and beginner-friendly, preparing
+    learners for school, work, business, and personal growth.
+  </p>
+  <p>
+    Whether you're learning Microsoft Office, computer fundamentals, or
+    everyday digital skills, WolfCore Academy helps you learn with
+    confidence.
+  </p>
+</section>
+
+<footer class="site-footer">
+  <span>🐺 WolfCore Academy</span>
+  <span>&copy; 2026 WolfCore Academy. All rights reserved.</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
