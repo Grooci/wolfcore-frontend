@@ -1,44 +1,5 @@
-/* ---------- Tokens ---------- */
-:root {
-  --bg: #0a0e17;
-  --surface: #121a2b;
-  --surface-2: #1a2338;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #f2f5fa;
-  --text-muted: #8d9bb5;
-  --accent-1: #5b8cff;
-  --accent-2: #b366ff;
-  --accent-warm: #ffb84d;
-  --gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
-  --font-body: "Inter", "Segoe UI", sans-serif;
-  --radius: 18px;
-  --max-width: 1120px;
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
-  margin: 0 0 0.5em;
-}
-
-p { margin: 0 0 1em; color: var(--text-muted); }
-
-a { color: inherit; text-decoration: none; }
+/* ---------- Page layout ---------- */
+/* Shared tokens, resets, and form controls now live in theme.css */
 
 section {
   max-width: var(--max-width);
@@ -219,12 +180,6 @@ section {
   50% { opacity: 0.65; transform: scale(1.06); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-text h1, .hero-lede, .hero-actions, .hero-subtle-link, .hero-wolf, .moon-glow {
-    animation: none;
-  }
-}
-
 /* ---------- Services / bento ---------- */
 .bento {
   display: grid;
@@ -381,12 +336,6 @@ section {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.85rem;
-}
-
-/* ---------- Focus states ---------- */
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--accent-1);
-  outline-offset: 3px;
 }
 
 /* ---------- Responsive ---------- */

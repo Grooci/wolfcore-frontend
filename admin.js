@@ -3,6 +3,7 @@ let token = localStorage.getItem("wolfcore_token");
 if (!token) {
     window.location.href = "login.html";
 }
+
 // 📊 fetch users from backend
 async function loadUsers() {
     let res = await fetch("https://wolfcore-backend.onrender.com/admin/users", {
@@ -19,22 +20,16 @@ async function loadUsers() {
             <div class="card">
                 <h3>${user.username}</h3>
                 <p>Role: ${user.role}</p>
+                <p>Progress: ${user.progress || 0}%</p>
+                <input type="number" min="0" max="100" id="p-${user.username}" placeholder="Update progress">
+                <button onclick="updateProgress('${user.username}')">
+                    Update
+                </button>
             </div>
         `;
     });
 }
-container.innerHTML += `
-    <div class="card">
-        <h3>${user.username}</h3>
-        <p>Role: ${user.role}</p>
-        <p>Progress: ${user.progress || 0}%</p>
-        <input type="number" min="0" max="100" id="p-${user.username}" placeholder="Update progress">
 
-        <button onclick="updateProgress('${user.username}')">
-            Update
-        </button>
-    </div>
-`;
 async function updateProgress(username) {
     let token = localStorage.getItem("wolfcore_token");
     let value = document.getElementById(`p-${username}`).value;
@@ -53,3 +48,6 @@ async function updateProgress(username) {
     alert(data.message);
     loadUsers(); // refresh UI
 }
+
+// Actually load the students when the page opens
+document.addEventListener("DOMContentLoaded", loadUsers);

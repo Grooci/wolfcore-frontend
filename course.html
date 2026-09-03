@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WolfCore Course</title>
-    <link rel="stylesheet" href="dashboard.css">
+<title>WolfCore Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
 <div class="main">
-    <div class="topbar">
-        <h1 id="courseTitle">Course</h1>
-        <button class="logout" onclick="goBack()">Back</button>
-    </div>
-    <div class="card">
-        <h2>Lesson 1</h2>
-        <p>Welcome to this course. More lessons coming soon.</p>
-    </div>
+<div class="topbar">
+<h1 id="courseTitle">Course</h1>
+<button class="logout" onclick="goBack()">Back</button>
 </div>
+
+<div class="card">
+<h2>Lesson 1</h2>
+<p>Welcome to this course. More lessons coming soon.</p>
+</div>
+</div>
+
 <script>
-    let course = localStorage.getItem("current_course");
+let course = localStorage.getItem("current_course");
 if (course) {
-    document.getElementById("courseTitle").innerText = course;
+  document.getElementById("courseTitle").innerText = course;
 } else {
-    document.getElementById("courseTitle").innerText = "Course";
+  document.getElementById("courseTitle").innerText = "Course";
 }
 </script>
 <script src="dashboard.js"></script>
